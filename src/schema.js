@@ -96,7 +96,7 @@ const ColorMutationType = new GraphQLObjectType({
     deleteColor: {
       type: ColorType,
       args: {
-        input: { type: new GraphQLNonNull(ColorDeconsteType) }
+        input: { type: new GraphQLNonNull(ColorDeleteType) }
       },
       resolve: (source, { input }) => {
         const index = Colors.findIndex(c => c.id === input.id);
